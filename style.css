@@ -1,0 +1,140 @@
+/* ===========================
+   Global Settings
+   =========================== */
+* {
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+window#waybar {
+    background: rgba(37, 39, 54, 0.9);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 21px 0px rgba(47, 47, 47, 0.46);
+}
+
+/* ===========================
+   Module Settings
+   =========================== */
+.modules-right {
+    margin: 5px 4px 5px 0;
+    padding: 0 4px 0 0;
+    background-color: transparent; /* было --bg1 */
+}
+
+.modules-center {
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+.modules-left {
+    margin: 1px 1px 1px 1px;
+}
+
+/* ===========================
+   Workspaces
+   =========================== */
+#workspaces button {
+    padding: 4px 4px 4px 4px;
+    background-color: transparent;
+    color: #ffffff;
+    border-style: none;
+}
+
+#workspaces button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+#workspaces button:last-child {
+    border: none;
+}
+
+#workspaces button:hover {
+    color: #aeaeae;
+    border-style: none;
+    background: rgba(37, 39, 54, 0.9);
+}
+
+#workspaces button.active {
+    color: rgba(255,255,255,.3);
+background: transparent;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+}
+
+#workspaces button.urgent {
+    color: #fefefe;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* ===========================
+   Individual modules
+   =========================== */
+#battery.charging,
+#battery.plugged {
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #aeaeae;
+}
+
+#clock,
+#bluetooth,
+#network,
+#battery,
+#backlight,
+#wireplumber {
+    padding: 0 5px 0 5px;
+    color: #ffffff; /* было var(--txt) */
+}
+
+#mpris.playing {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+#clock {
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+#window {
+	font-weight: bolder;
+	padding-left: 20px;
+}
+
+#cpu {
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+#memory {
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+#taskbar button {
+    padding: 0 6px;
+    background: transparent;
+}
+
+#taskbar button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+#temperature {
+	margin-left: 10px;
+	font-weight: bold;
+}
